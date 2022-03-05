@@ -1,5 +1,8 @@
 ﻿// num1 до 50, только для того, чтобы подошло по всем условиям
 // num2 до 7, - по количеству дней недели и для поиска квадрата 
+
+using System.Threading.Channels;
+
 int num1 = new Random().Next(1,50); 
 int num2 = new Random().Next(1, 7);
 
@@ -60,10 +63,11 @@ void isSqrtOffNumber(int num1, int num2)
         Console.WriteLine($"число {num1} НЕ является квадратом {num2}");
 }   
 isSqrtOffNumber(num1, num2);
-Console.WriteLine("\n----------------------");
+Console.WriteLine("----------------------");
 // просто проверка
 isSqrtOffNumber(16, 4); 
 isSqrtOffNumber(49, 7);
+Console.WriteLine("\n----------------------");
 
 
 
@@ -77,16 +81,17 @@ void getNumberOfQaurterPlane()
     int tmp; // для проверки что не 0
     int i = 0;
     do
+    {
+        tmp = new Random().Next(-10, 15);
+        if (tmp != 0)
         {
-            tmp = new Random().Next(-10, 10);
-            if (tmp != 0)
-            {
-                ord[i] = tmp;
-                i++;
-            }
-            //Console.WriteLine("tmp=" + tmp + " i=" + i);
+            ord[i] = tmp;
+            i++;
         }
+        //Console.WriteLine("tmp=" + tmp + " i=" + i);
+    }
     while (i < ord.Length);
+    
     Console.WriteLine($"Определить номер четверти плоскости,");
     Console.WriteLine($"в которой находится точка с координатами: X={ord[0]} и Y={ord[1]}");
 
@@ -100,6 +105,39 @@ void getNumberOfQaurterPlane()
         Console.WriteLine("это IV четверть");
 }
 getNumberOfQaurterPlane();
+Console.WriteLine("\n----------------------");
+
+
 
 // Найти расстояние между точками в пространстве 2D/3D
+// создадим две трехмерные точки. для нахождения в расстояния между ними в 2D
+// просто не будем учитывать их координаты по оси Z
+void getPointRange()
+{
+    
+    
+    int[] a = new int[3];
+    int[] b = new int[3];
+    double range = 0;
+    
+    for (int i = 0; i < 3; i++)
+    {
+        a[i] = new Random().Next(-50, 50);
+        b[i] = new Random().Next(-50, 50);
+    }
+    Console.WriteLine(" Найти расстояние между точками в пространстве 2D/3D ");
+    Console.WriteLine($"a[X={a[0]},Y={a[1]},Z={a[2]}], b[X={b[0]},Y={b[1]},Z={b[2]}]");
 
+    // 2D
+    range = Math.Sqrt(Math.Pow(b[0] - a[0], 2)
+        + Math.Pow(b[1] - a[1], 2));
+
+    Console.WriteLine("В 2D = {0:f2}", range);
+
+    range = Math.Sqrt(Math.Pow(b[0] - a[0], 2)
+        + Math.Pow(b[1] - a[1], 2)
+        + Math.Pow(b[2] - a[2], 2));
+    Console.WriteLine("В 3D = {0:f2}", range);
+
+}
+getPointRange();
