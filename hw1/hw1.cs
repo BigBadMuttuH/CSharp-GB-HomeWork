@@ -134,3 +134,6 @@ void getThirdNumber(int num)
 }
 getThirdNumber(twoDigitNum);
 getThirdNumber(num * threeDigitNum);
+// для проверки
+getThirdNumber(999);
+getThirdNumber(100);
