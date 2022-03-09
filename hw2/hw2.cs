@@ -141,3 +141,62 @@ void getPointRange()
 
 }
 getPointRange();
+
+
+
+//Задание
+//Задача 10: Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
+//Пример
+//456 -> 5
+//782 -> 8
+//918 -> 1
+int getSecondNumber(int num)
+{
+    int number = System.Math.Abs(num / 10 % 10);
+    return number;
+}
+Console.WriteLine(getSecondNumber(456));
+Console.WriteLine("----------------------");
+Console.WriteLine(getSecondNumber(782));
+Console.WriteLine("----------------------");
+Console.WriteLine(getSecondNumber(981));
+Console.WriteLine("----------------------");
+
+
+
+//Задача 13: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
+//645 -> 5
+//78 -> третьей цифры нет
+//32679 -> 6
+Console.WriteLine("Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.");
+void getThirdNumber(int num)
+{
+    int number = num % 10;
+    int tmp = num; // только для кравивого вывода
+
+    if (num < 100)
+        Console.WriteLine($"{num} двухзначное число");
+    else
+    {
+        while (num > 100)
+        {
+            number = num % 10;
+            num = System.Math.Abs(num / 10);
+        }
+        Console.WriteLine($"Третья цифра числа {tmp} = {number}");
+    }
+}
+getThirdNumber(645);
+getThirdNumber(78);
+getThirdNumber(32679);
+getThirdNumber(100);
+Console.WriteLine("\n----------------------");
+
+//Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
+//6 -> да
+//7 -> да
+//1 -> нет
+Console.WriteLine("Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным");
+printDayOff(6);
+printDayOff(7);
+printDayOff(1);
