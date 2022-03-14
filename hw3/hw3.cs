@@ -7,7 +7,7 @@
 Console.WriteLine("Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом");
 void isPalindrom(int num)
 {
-    int tmp = num;    
+    int tmp = num;
     int[] n = new int[5];
     for (int i = 0; i < n.Length; i++)
     {
@@ -67,7 +67,7 @@ void getCubeOfNumber(int num)
     Console.WriteLine($"Кубы числел до {num}\n");
     for (int i = 1; i <= num; i++)
     {
-        Console.Write($"{i}^3={ i * i *i}, ");
+        Console.Write($"{i}^3={ i * i * i}, ");
     }
     Console.WriteLine("\n----------------------------------");
 }

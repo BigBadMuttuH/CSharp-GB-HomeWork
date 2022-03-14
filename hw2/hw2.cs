@@ -1,9 +1,7 @@
 ﻿// num1 до 50, только для того, чтобы подошло по всем условиям
 // num2 до 7, - по количеству дней недели и для поиска квадрата 
 
-using System.Threading.Channels;
-
-int num1 = new Random().Next(1,50); 
+int num1 = new Random().Next(1,50);
 int num2 = new Random().Next(1, 7);
 
 //- Показать числа от -N до N
@@ -61,11 +59,11 @@ void isSqrtOffNumber(int num1, int num2)
         Console.WriteLine($"число {num1} является квадратом {num2}");
     else
         Console.WriteLine($"число {num1} НЕ является квадратом {num2}");
-}   
+}
 isSqrtOffNumber(num1, num2);
 Console.WriteLine("----------------------");
 // просто проверка
-isSqrtOffNumber(16, 4); 
+isSqrtOffNumber(16, 4);
 isSqrtOffNumber(49, 7);
 Console.WriteLine("\n----------------------");
 
@@ -91,7 +89,7 @@ void getNumberOfQaurterPlane()
         //Console.WriteLine("tmp=" + tmp + " i=" + i);
     }
     while (i < ord.Length);
-    
+
     Console.WriteLine($"Определить номер четверти плоскости,");
     Console.WriteLine($"в которой находится точка с координатами: X={ord[0]} и Y={ord[1]}");
 
@@ -114,12 +112,12 @@ Console.WriteLine("\n----------------------");
 // просто не будем учитывать их координаты по оси Z
 void getPointRange()
 {
-    
-    
+
+
     int[] a = new int[3];
     int[] b = new int[3];
     double range = 0;
-    
+
     for (int i = 0; i < 3; i++)
     {
         a[i] = new Random().Next(-50, 50);

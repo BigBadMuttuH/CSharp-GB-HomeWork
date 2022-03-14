@@ -3,7 +3,7 @@ int threeDigitNum = new Random().Next(100,999);
 int num = new Random().Next(1,999);
 
 
- //- Вывести квадрат числа
+//- Вывести квадрат числа
 Console.WriteLine($"Вывести квадрат числа {num}");
 int getSquare(int num)
 {
@@ -14,7 +14,7 @@ Console.WriteLine(getSquare(num));
 Console.WriteLine("----------------------");
 
 
- //- Найти максимальное из трех чисел
+//- Найти максимальное из трех чисел
 Console.WriteLine($"Найти максимальное из трех чисел {num},{twoDigitNum},{threeDigitNum}");
 int getMaximum(int a, int b, int c)
 {
@@ -29,7 +29,7 @@ Console.WriteLine("----------------------");
 
 
 
- //- Выяснить является ли число чётным
+//- Выяснить является ли число чётным
 Console.WriteLine($"Выяснить является ли число {threeDigitNum} чётным");
 bool isEvenNumber(int number)
 {
@@ -42,7 +42,7 @@ Console.WriteLine("----------------------");
 
 
 
- //- Показать последнюю цифру трёхзначного числа
+//- Показать последнюю цифру трёхзначного числа
 Console.WriteLine($"Показать последнюю цифру трёхзначного числа {threeDigitNum}");
 int getLastNumber(int num)
 {
@@ -55,7 +55,7 @@ Console.WriteLine("----------------------");
 
 
 
- //- Показать вторую цифру трёхзначного числа
+//- Показать вторую цифру трёхзначного числа
 Console.WriteLine($"Показать вторую цифру трёхзначного числа {threeDigitNum}");
 int getSecondNumber(int num)
 {
@@ -67,7 +67,7 @@ Console.WriteLine("----------------------");
 
 
 
- //- Дано число из отрезка [10, 99]. Показать наибольшую цифру числа
+//- Дано число из отрезка [10, 99]. Показать наибольшую цифру числа
 Console.WriteLine($"Дано число из отрезка [10, 99] {twoDigitNum}. Показать наибольшую цифру числа");
 int getMaxFromNaumber(int num)
 {
@@ -81,7 +81,7 @@ Console.WriteLine("----------------------");
 
 
 
- //- Удалить вторую цифру трёхзначного числа
+//- Удалить вторую цифру трёхзначного числа
 Console.WriteLine($"Удалить вторую цифру трёхзначного числа {threeDigitNum}");
 int removeSecondNum(int num)
 {
@@ -98,7 +98,7 @@ Console.WriteLine("----------------------");
 
 
 
- //- Выяснить, кратно ли число заданному, если нет, вывести остаток.
+//- Выяснить, кратно ли число заданному, если нет, вывести остаток.
 Console.WriteLine($"Выяснить, кратно ли число {num} заданному {twoDigitNum}, если нет, вывести остаток.");
 void isMultipleToNum(int a, int b)
 {
@@ -117,7 +117,7 @@ Console.WriteLine("----------------------");
 
 
 
- //- Найти третью цифру числа или сообщить, что её нет
+//- Найти третью цифру числа или сообщить, что её нет
 Console.WriteLine($"Найти третью цифру {twoDigitNum} и {num * threeDigitNum} или сообщить, что её нет.");
 void getThirdNumber(int num)
 {
@@ -128,11 +128,11 @@ void getThirdNumber(int num)
         Console.WriteLine($"{num} двухзначное число");
     else
     {
-        while(num > 100)
+        while (num > 100)
         {
             number = num % 10;
             num = System.Math.Abs(num / 10);
-        }   
+        }
         Console.WriteLine($"Третья цифра числа {tmp} = {number}");
     }
 }
