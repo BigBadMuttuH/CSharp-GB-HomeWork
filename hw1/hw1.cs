@@ -153,7 +153,7 @@ Console.WriteLine("\n----------------------");
 Console.WriteLine("Напишите программу, которая на вход принимает два числа и выдаёт, какое число большее, а какое меньшее");
 void getMinMaximum(int a, int b)
 {
-    int max = a > b ? max = a: max = b;
+    int max = a > b ? a : b;
     Console.WriteLine($"a={a}, b={b}, max -> {max}");
 }
 getMinMaximum(5, 7);
