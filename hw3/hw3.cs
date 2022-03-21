@@ -19,10 +19,10 @@ void isPalindrom(int num)
     else
         Console.WriteLine($"{tmp} - НЕ палиндром");
 }
-isPalindrom(14212);
-isPalindrom(23432);
-isPalindrom(12821);
-Console.WriteLine("\n----------------------------------");
+//isPalindrom(14212);
+//isPalindrom(23432);
+//isPalindrom(12821);
+//Console.WriteLine("\n----------------------------------");
 
 //Задача 21: Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
 //A (3,6,8); B(2, 1, -7), -> 15.84
@@ -53,8 +53,8 @@ void getPointRange()
     Console.WriteLine("В 3D = {0:f2}", range);
 
 }
-getPointRange();
-Console.WriteLine("\n----------------------------------");
+//getPointRange();
+//Console.WriteLine("\n----------------------------------");
 
 
 //Задача 23: Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
@@ -71,8 +71,32 @@ void getCubeOfNumber(int num)
     }
     Console.WriteLine("\n----------------------------------");
 }
-getCubeOfNumber(3);
-getCubeOfNumber(5);
-getCubeOfNumber(8);
-getCubeOfNumber(10);
-Console.WriteLine("\n----------------------------------");
+//getCubeOfNumber(3);
+//getCubeOfNumber(5);
+//getCubeOfNumber(8);
+//getCubeOfNumber(10);
+//Console.WriteLine("\n----------------------------------");
+
+bool testPalindrom(int num)
+{
+    bool isTrue;
+    int tmp = num;
+    Console.WriteLine(num);
+    int number = 0;
+    while (num > 0)
+    {
+        number = number * 10 + (num % 10);
+        num /= 10;
+    }
+    Console.WriteLine(number);
+    if (tmp == number)
+        isTrue = true;
+    else
+        isTrue = false;
+
+
+    return isTrue;
+}
+Console.WriteLine(testPalindrom(101));
+Console.WriteLine(testPalindrom(20020320));
+Console.WriteLine(testPalindrom(101101));
