@@ -69,7 +69,7 @@ void PrintArray(int[] myArray)
         Console.Write($"{myArray[i]}");
         if (i == myArray.Length - 1)
         {
-            Console.Write(" ]\n");
+            Console.Write(" ]");
         }
         else
         {
@@ -81,5 +81,6 @@ void PrintArray(int[] myArray)
 
 int[] myArray1 = CreateArray(length: 5, deviation: 100);
 PrintArray(myArray1);
+Console.WriteLine();
 int[] myArray2 = CreateArray(length: 3, deviation: 100);
 PrintArray(myArray2);
