@@ -69,7 +69,7 @@ int GetEvenNumbersInArray(int[] givenArray)
     return counter;
 }
 
-int[] myArray1 = CreateArray(4, 0, 999);
+int[] myArray1 = CreateArray(4, 100, 999);
 int evenCount = GetEvenNumbersInArray(myArray1);
 PrintArray(myArray1);
 Console.Write($" Even numbers in array -> {evenCount}");
