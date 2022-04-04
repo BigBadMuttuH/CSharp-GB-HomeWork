@@ -79,7 +79,7 @@ String isNumberInArrat(int[,] someIntArray, int number)
     {
         if (item == number) return $"число {number} есть в массиве!";
     }
-    return $"число {number} отсутсвует в массиве";
+    return $"число {number} отсутствует в массиве";
 }
 
 
