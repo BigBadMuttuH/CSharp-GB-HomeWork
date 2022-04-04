@@ -1,4 +1,4 @@
-﻿void PrintTowDimintArray(int[,] myArray)
+﻿void Print2DArray(int[,] myArray)
 {
     Console.ForegroundColor = ConsoleColor.White;
     Console.ForegroundColor = ConsoleColor.DarkGreen;
@@ -15,7 +15,7 @@
 }
 
 
-int[,] CreateTowDimArray(int hight, int length, int min, int max)
+int[,] Create2DimArray(int hight, int length, int min, int max)
 {
     int[,] myTowDimArray = new int[hight, length];
 
@@ -33,7 +33,7 @@ int[,] CreateTowDimArray(int hight, int length, int min, int max)
 // Задача 47:
 // Задайте двумерный массив размером m×n,
 // заполненный случайными вещественными числами.
-float[,] CreateTowDimentionFloatArray(int hight, int length, int min, int max)
+float[,] Create2DFloatArray(int hight, int length, int min, int max)
 {
     float[,] towDimFloatArray = new float[hight, length];
 
@@ -50,7 +50,7 @@ float[,] CreateTowDimentionFloatArray(int hight, int length, int min, int max)
     return towDimFloatArray;
 }
 
-void PrintTowDimFloatArray(float[,] myArray)
+void Print2DFloatArray(float[,] myArray)
 {
     Console.ForegroundColor = ConsoleColor.White;
     Console.ForegroundColor = ConsoleColor.DarkGreen;
@@ -64,8 +64,8 @@ void PrintTowDimFloatArray(float[,] myArray)
     }
     Console.ForegroundColor = ConsoleColor.White;
 }
-float[,] myFloatArray = CreateTowDimentionFloatArray(3, 4, -10, 10);
-PrintTowDimFloatArray(myFloatArray);
+float[,] myFloatArray = Create2DFloatArray(3, 4, -10, 10);
+Print2DFloatArray(myFloatArray);
 Console.WriteLine();
 
 
@@ -82,29 +82,29 @@ int GetNumberFromPositionInArray(int[,] someIntArray, int number)
         
         // найдем индексы нужного элемента в массиве
         int i = 0, j = 0;
-        // строка (row ряд) в котором находиься нужный элемент
+        // строка (row ряд) в котором находится нужный элемент
         while (number > rowLength)
         {
             number -= rowLength;
             i++;
         }
-        // индеск элемента в конкретном ряду (колонка)
+        // индекс элемента в конкретном ряду (колонка)
         j = rowLength - ( rowLength - number ) - 1;
 
         return someIntArray[i, j];
     }
     // нужно вернуть число!
     // если ни чего не получилось,
-    // то возвращем число,
-    // ктоторого точно не може быть в массиве.
+    // то возвращаем число,
+    // ктоторого точно не может быть в массиве.
     // например "-1" для массива положительных чисел.
 
     return -1;
 }
 
 
-int[,] myIntArray = CreateTowDimArray(hight:3, length: 5, min: 0, max:10);
-PrintTowDimintArray(myIntArray);
+int[,] myIntArray = Create2DimArray(hight:3, length: 5, min: 0, max:10);
+Print2DArray(myIntArray);
 
 int position = new Random().Next(0, myIntArray.Length);
 
