@@ -79,12 +79,15 @@ int GetNumberFromPositionInArray(int[,] someIntArray, int number)
     if ( number > 0 && number <= someIntArray.Length)
     {
         int rowLength = someIntArray.GetLength(1);
-        
-        // найдем индексы нужного элемента в массиве
-        int i = number < rowLength ? number - 1 : System.Math.Round(number / rowLength, 0) - 1;
+        int colomnLength = someIntArray.GetLength(0);
+       
 
+        // найдем индексы нужного элемента в массиве
+        int i = number / rowLength;
         // индекс элемента в конкретном ряду (колонка)
-        int j = rowLength  - i );
+        number = number % rowLength;
+        int j = rowLength - (rowLength - number) - 1;
+        Console.WriteLine($"i={i}, j ={j}");
         
 
         return someIntArray[i, j];
@@ -102,6 +105,7 @@ int GetNumberFromPositionInArray(int[,] someIntArray, int number)
 int[,] myIntArray = Create2DimArray(hight:3, length: 5, min: 0, max:10);
 Print2DArray(myIntArray);
 
+
 int position = new Random().Next(0, myIntArray.Length);
 
 int number = GetNumberFromPositionInArray(myIntArray, position);
@@ -112,7 +116,12 @@ String str50 = number >= 0
     :
     $"позиция {position} за пределами массива";
 
+
 Console.WriteLine(str50);
+for (int i = 0; i < 20; i++)
+{
+    Console.WriteLine(GetNumberFromPositionInArray(myIntArray, i) + "; " + i);
+}
 
 
 
