@@ -72,23 +72,23 @@ Console.WriteLine();
 // Задача 50:
 // Напишите программу, которая на вход принимает позиции элемента в двумерном массиве,
 // и возвращает значение этого элемента или же указание, что такого элемента нет.
-int GetNumberFromPositionInArray(int[,] someIntArray, int number)
+int GetNumberFromPositionInArray(int[,] someIntArray, int elementPosition)
 {
-    int position = number;
+    int position = elementPosition;
 
-    if ( number > 0 && number <= someIntArray.Length)
+    if (elementPosition > 0 && elementPosition <= someIntArray.Length)
     {
         int rowLength = someIntArray.GetLength(1);
 
         int i = 0, j = 0;
         // строка (row ряд) в котором находится нужный элемент
-        while (number > rowLength)
+        while (elementPosition > rowLength)
         {
-            number -= rowLength;
+            elementPosition -= rowLength;
             i++;
         }
         // индекс элемента в конкретном ряду (колонка)
-        j = rowLength - ( rowLength - number ) - 1;
+        j = rowLength - ( rowLength - elementPosition ) - 1;
 
         return someIntArray[i, j];
     }
