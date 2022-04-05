@@ -81,15 +81,11 @@ int GetNumberFromPositionInArray(int[,] someIntArray, int number)
         int rowLength = someIntArray.GetLength(1);
         
         // найдем индексы нужного элемента в массиве
-        int i = 0, j = 0;
-        // строка (row ряд) в котором находится нужный элемент
-        while (number > rowLength)
-        {
-            number -= rowLength;
-            i++;
-        }
+        int i = number < rowLength ? number - 1 : System.Math.Round(number / rowLength, 0) - 1;
+
         // индекс элемента в конкретном ряду (колонка)
-        j = rowLength - ( rowLength - number ) - 1;
+        int j = rowLength - ( rowLength - i );
+        
 
         return someIntArray[i, j];
     }
