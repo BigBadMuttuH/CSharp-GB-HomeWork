@@ -79,23 +79,23 @@ int GetNumberFromPositionInArray(int[,] someIntArray, int number)
     if ( number > 0 && number <= someIntArray.Length)
     {
         int rowLength = someIntArray.GetLength(1);
-        int colomnLength = someIntArray.GetLength(0);
-       
 
-        // найдем индексы нужного элемента в массиве
-        int i = number / rowLength;
+        int i = 0, j = 0;
+        // строка (row ряд) в котором находится нужный элемент
+        while (number > rowLength)
+        {
+            number -= rowLength;
+            i++;
+        }
         // индекс элемента в конкретном ряду (колонка)
-        number = number % rowLength;
-        int j = rowLength - (rowLength - number) - 1;
-        Console.WriteLine($"i={i}, j ={j}");
-        
+        j = rowLength - ( rowLength - number ) - 1;
 
         return someIntArray[i, j];
     }
     // нужно вернуть число!
     // если ни чего не получилось,
     // то возвращаем число,
-    // ктоторого точно не может быть в массиве.
+    // которого точно не может быть в массиве.
     // например "-1" для массива положительных чисел.
 
     return -1;
@@ -107,21 +107,15 @@ Print2DArray(myIntArray);
 
 
 int position = new Random().Next(0, myIntArray.Length);
-
 int number = GetNumberFromPositionInArray(myIntArray, position);
 
-String str50 = number >= 0
-    ?
-    $"На {position} позиции в массиве находится число = {number}"
-    :
+String str50 = number >= 0 ?
+    $"На {position} позиции в массиве находится число = {number}" :
     $"позиция {position} за пределами массива";
 
-
 Console.WriteLine(str50);
-for (int i = 0; i < 20; i++)
-{
-    Console.WriteLine(GetNumberFromPositionInArray(myIntArray, i) + "; " + i);
-}
+
+
 
 
 
@@ -135,7 +129,7 @@ float[] GetAverage(int[,] intArray)
 
     int rows = intArray.GetLength(0);
     int columns = intArray.GetLength(1);
-    
+
     // Console.WriteLine("rows {0}, columns={1}", rows, columns);
     for (int j = 0; j < columns; j++)
     {
@@ -157,6 +151,16 @@ Console.ForegroundColor = ConsoleColor.Red;
 foreach (var item in avarageArray)
 {
     Console.Write($"{item:f1}\t");
-}    
+}
 
 Console.ForegroundColor = ConsoleColor.White;
+
+
+//// тест к задаче 50
+Console.WriteLine("\n");
+Console.WriteLine("тест к задаче 50");
+int rowLength = myIntArray.GetLength(1);
+for (int i = 0; i < myIntArray.Length + 2; i++)
+{
+    Console.WriteLine($"на позиции {i} находится {GetNumberFromPositionInArray(myIntArray, i)}");
+}
