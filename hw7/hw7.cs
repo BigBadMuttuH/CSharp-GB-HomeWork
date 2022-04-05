@@ -84,7 +84,7 @@ int GetNumberFromPositionInArray(int[,] someIntArray, int number)
         int i = number < rowLength ? number - 1 : System.Math.Round(number / rowLength, 0) - 1;
 
         // индекс элемента в конкретном ряду (колонка)
-        int j = rowLength - ( rowLength - i );
+        int j = rowLength  - i );
         
 
         return someIntArray[i, j];
