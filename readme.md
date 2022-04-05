@@ -49,7 +49,7 @@ a = -9 b = -3 -> max = -3
 8 -> 2, 4, 6, 8
 ```
 
-[Решение](https://github.com/BigBadMuttuH/CSharp-GB-HomeWork/blob/main/hw3/hw3.cs)
+[Решение](https://github.com/BigBadMuttuH/CSharp-GB-HomeWork/blob/main/hw2/hw2.cs)
 
 # Урок 3. Массивы и функции в программировании
  - Задача 19: Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
@@ -71,7 +71,7 @@ A (7,-5, 0); B (1,-1,9) -> 11.53
 5 -> 1, 8, 27, 64, 125
 ```
 
-[Решение](https://github.com/BigBadMuttuH/CSharp-GB-HomeWork/blob/main/hw4/hw4.cs)
+[Решение](https://github.com/BigBadMuttuH/CSharp-GB-HomeWork/blob/main/hw3/hw3.cs)
 
 # Урок 4. Функции продолжение
  - Задача 25: Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
@@ -91,7 +91,7 @@ A (7,-5, 0); B (1,-1,9) -> 11.53
 6, 1, 33 -> [6, 1, 33]
 ```
 
-[Решение](https://github.com/BigBadMuttuH/CSharp-GB-HomeWork/blob/main/hw5/hw5.cs)
+[Решение](https://github.com/BigBadMuttuH/CSharp-GB-HomeWork/blob/main/hw4/hw4.cs)
 
 # Урок 5. Функции продолжение
 - Задача 34: Задайте массив заполненный случайными положительными трёхзначными числами. Напишите программу, которая покажет количество чётных чисел в массиве.
@@ -108,7 +108,7 @@ A (7,-5, 0); B (1,-1,9) -> 11.53
 [3 7 22 2 78] -> 76
 ```
 
-[Решение](https://github.com/BigBadMuttuH/CSharp-GB-HomeWork/blob/main/hw6/hw6.cs)
+[Решение](https://github.com/BigBadMuttuH/CSharp-GB-HomeWork/blob/main/hw5/hw5.cs)
 
 # Урок 6. Двумерные массивы и рекурсия
  - Задача 41: Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.
@@ -121,7 +121,7 @@ A (7,-5, 0); B (1,-1,9) -> 11.53
 b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; 5,5)
 ```
 
-[Решение](https://github.com/BigBadMuttuH/CSharp-GB-HomeWork/blob/main/hw7/hw7.cs)
+[Решение](https://github.com/BigBadMuttuH/CSharp-GB-HomeWork/blob/main/hw6/hw6.cs)
 
 # Урок 7. Как не нужно писать код. Часть 1
 
@@ -152,7 +152,7 @@ m = 3, n = 4.
 Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
 ```
 
-[Решение](https://github.com/BigBadMuttuH/CSharp-GB-HomeWork/blob/main/hw8/hw8.cs)
+[Решение](https://github.com/BigBadMuttuH/CSharp-GB-HomeWork/blob/main/hw7/hw7.cs)
 
 # Урок 8. Как не нужно писать код. Часть 2
 
