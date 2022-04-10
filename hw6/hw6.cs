@@ -20,7 +20,7 @@ int[] CreateArrayFromConsole(int number)
 
 int GetPositiveNumbersCount(int[] intArray)
 {
-    // совместим проход по массиву с его выводом на конслоль.
+    // совместим проход по массиву с его выводом на консоль.
     int counter = 0;
     foreach (int item in intArray)
     {

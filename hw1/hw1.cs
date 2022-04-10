@@ -122,7 +122,7 @@ Console.WriteLine($"Найти третью цифру {twoDigitNum} и {num * t
 void getThirdNumber(int num)
 {
     int number = num % 10;
-    int tmp = num; // только для кравивого вывода
+    int tmp = num; // только для красивого вывода
 
     if (num < 100)
         Console.WriteLine($"{num} двухзначное число");
