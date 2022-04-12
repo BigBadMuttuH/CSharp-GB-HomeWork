@@ -117,8 +117,9 @@ int[,] myArray = Create2DimArray(3, 5, -2, 3);
 Print2DArray(myArray);
 int[,] myFrArray = GetFrequencyArray(myArray);
 PrintFrequencyArray(myFrArray);
+
 Console.WriteLine("Нажмите любую клавишу, чтобы продолжить");
-ConsoleKeyInfo clik = Console.ReadKey();
+Console.ReadKey();
 Console.Clear();
 
 
@@ -146,10 +147,14 @@ int[][] CreatePascalsTriangle(int rows)
 
             // с выводом на консоль так себе получилось. :(
             if (j == 0)
-                Console.Write($"{new string(' ', rows - i )}" +
+            {
+                Console.Write($"{new string(' ', rows - i)}" +
                             $" {pascalsTriangleArray[i][j]} ");
+            }
             else
+            {
                 Console.Write($" {pascalsTriangleArray[i][j]} ");
+            }
         }
         Console.WriteLine();
     }
@@ -160,7 +165,7 @@ int[][] CreatePascalsTriangle(int rows)
 int rows = int.Parse(Console.ReadLine());
 CreatePascalsTriangle(rows);
 Console.WriteLine("Нажмите любую клавишу, чтобы продолжить");
-clik = Console.ReadKey();
+Console.ReadKey();
 Console.Clear();
 
 
@@ -187,6 +192,7 @@ int[,] Sort2DArray(int[,] int2DArray)
             for (int k = 0; k < int2DArray.GetLength(1); k++)
             {
                 if (int2DArray[i, j] <= int2DArray[i, k]) continue;
+
                 tmp = int2DArray[i, j];
                 int2DArray[i, j] = int2DArray[i, k];
                 int2DArray[i, k] = tmp;
@@ -202,7 +208,7 @@ Console.WriteLine("Упорядоченный массив");
 Print2DArray(myArray54);
 
 Console.WriteLine("Нажмите любую клавишу, чтобы продолжить");
-clik = Console.ReadKey();
+Console.ReadKey();
 Console.Clear();
 
 
@@ -246,7 +252,7 @@ Console.WriteLine($"Наименьшая сумма чисел в строке -
 
 
 Console.WriteLine("Нажмите любую клавишу, чтобы продолжить");
-clik = Console.ReadKey();
+Console.ReadKey();
 Console.Clear();
 
 
@@ -304,8 +310,9 @@ int[,] Multiply2Matrix(int[,] aMatrix, int[,] bMatrix)
 int[,] mMatrix = Multiply2Matrix(aMatrix, bMatrix);
 Console.WriteLine("Произведение матрицы А на B:");
 Print2DArray(mMatrix);
+
 Console.WriteLine("Нажмите любую клавишу, чтобы продолжить");
-clik = Console.ReadKey();
+Console.ReadKey();
 Console.Clear();
 
 
@@ -371,7 +378,7 @@ Print3DArray(array3D);
 System.Console.WriteLine();
 
 Console.WriteLine("Нажмите любую клавиру, чтобы продолжить");
-clik = Console.ReadKey();
+Console.ReadKey();
 Console.Clear();
 
 
