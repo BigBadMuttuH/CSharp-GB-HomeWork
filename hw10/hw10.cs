@@ -45,7 +45,7 @@ Console.WriteLine();
 
 // получаем массив нужных элементов
 // из массива intDataArray, выбирая по количеству элементов intInfoArray
-// пошел простым путем, и сложил все в массив Sting-оф :(
+// пошел простым путем, и сложил все в массив String-оф :(
 // наверняка есть более простое решение, но я его пока не нашел.
 
 String[] ParseDataFromArray(int[] intDataArray, int[] intInfoArray)
