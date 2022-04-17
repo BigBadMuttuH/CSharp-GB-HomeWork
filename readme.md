@@ -213,3 +213,5 @@ info = {2, 3, 3, 1 }
 выходные данные:
 1, 7, 0, 1
 ```
+
+[Решение](https://github.com/BigBadMuttuH/CSharp-GB-HomeWork/blob/main/hw10/hw10.cs)
