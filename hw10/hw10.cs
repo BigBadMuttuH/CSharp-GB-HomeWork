@@ -46,7 +46,7 @@ Console.WriteLine();
 // получаем массив нужных элементов
 // из массива intDataArray, выбирая по количеству элементов intInfoArray
 // пошел простым путем, и сложил все в массив Sting-оф :(
-// наверника есть более простое решение, но я его пока не нашел.
+// наверняка есть более простое решение, но я его пока не нашел.
 
 String[] ParseDataFromArray(int[] intDataArray, int[] intInfoArray)
 {
@@ -68,7 +68,7 @@ String[] ParseDataFromArray(int[] intDataArray, int[] intInfoArray)
 }
 
 
-int[] ConvertationArrayToDec(string[] stringArray)
+int[] ConversionArrayToDec(string[] stringArray)
 {
     int[] decimalArray = new int[stringArray.Length];
 
@@ -96,6 +96,6 @@ foreach (var item in bArray)
 }
 Console.WriteLine();
 
-int[] intArray = ConvertationArrayToDec(bArray);
+int[] intArray = ConversionArrayToDec(bArray);
 Console.WriteLine("Decimal Array:");
 PrintArray(intArray);
